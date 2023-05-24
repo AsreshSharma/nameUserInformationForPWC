@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Company</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of lists;">
+            <td>{{list.name}}</td>
+            <td>{{list.username}}</td>
+            <td>{{list.email}}</td>
+            <td>{{list.address.suite}}, {{list.address.street}}, {{list.address.city}}, {{list.address.zipcode}}</td>
+            <td>{{list.phone}}</td>
+            <td>{{list.company.name}}</td>
+        </tr>  
+        
+        <tr *ngIf="lists?.length == 0">
+            <td colspan="6">You have no user information lists.</td>
+        </tr>
+  </table>

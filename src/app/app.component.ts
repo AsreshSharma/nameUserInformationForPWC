@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nameUserInformationForPWC';
+  getDate:any='';
+  ngOnInit(): void {
+    this.getDate =new Date();
+  }
 }
